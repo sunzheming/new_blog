@@ -1,0 +1,7 @@
+<hr>
+<p>
+	name :<%= comment.name %><br>
+	Comment : <%= comment.body %>
+	<%= link_to 'Delete', [comment.post, comment], method: :delete, class: "button", data: {confirm: 'Are you sure? '} %>
+</p>
+<hr>
