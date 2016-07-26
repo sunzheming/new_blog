@@ -1,0 +1,6 @@
+<h1>all Category</h1>
+<% @categories.each do |category| %>
+	<%= category.name %> |
+	<%= link_to 'edit', edit_category_path(category) %>|
+	<%= link_to 'delete', category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %> <br>
+<% end %>

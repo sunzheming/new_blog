@@ -9,7 +9,10 @@
 				</ul>
 		</div>
 	<% end %> 
-
+	<p>
+		choice category:<br>
+		<%= f.collection_select :category_id, Category.all, :id, :name %>
+	</p>
 	<p>
 		Title:<br>
 		<%= f.text_field :title %>
