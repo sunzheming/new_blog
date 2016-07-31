@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
 	def index
 		@categories = Category.all.order('created_at DESC')
+		render layout: 'admin'
 	end
 
 	def new
@@ -20,6 +21,7 @@ class CategoriesController < ApplicationController
 
 	def edit
 		@category = Category.find_by(params[:id])
+		render layout: 'admin'
 	end
 
 	def update

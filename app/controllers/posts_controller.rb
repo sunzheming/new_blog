@@ -36,6 +36,7 @@ class PostsController < ApplicationController
 
 	def edit
 		@post = Post.find(params[:id])
+		render layout: 'admin'
 	end
 
 	def update
@@ -51,9 +52,10 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post = Post.find(params[:id])
-		@post.desyroy
+		@post.destroy
 
-		redirect_to root_path
+		redirect_to admin_index_path
+
 	end
 
 
