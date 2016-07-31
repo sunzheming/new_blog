@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	
-	# before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!, except: [:index, :show]
+ 
 
 	def index
 		if params[:category].blank?
@@ -15,6 +16,8 @@ class PostsController < ApplicationController
 
 	def new 
 		@post = Post.new
+
+		render layout: 'admin'
 	end 
 
 	def create
@@ -61,4 +64,5 @@ class PostsController < ApplicationController
 	def post_params
 		params.require(:post).permit(:title, :body, :category_id)
 	end
+
 end
