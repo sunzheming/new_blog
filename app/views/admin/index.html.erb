@@ -12,8 +12,8 @@
 			
 	     
 	        <p>
-		        <div href="#" class="btn btn-primary" role="button"><%= link_to 'edit', edit_post_path(@post) %></div> 
-		        <div href="#" class="btn btn-default" role="button"><%= link_to 'destroy', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %></div>
+		        <div href="#" class="btn btn-default" role="button"><%= link_to 'edit', edit_post_path(post) %></div> 
+		        <div href="#" class="btn btn-default" role="button"><%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %></div>
 	        </p>
 	      </div>
 	    </div>

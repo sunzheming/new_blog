@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 		
 		if @post.save
-			redirect_to @post
+			redirect_to admin_index_path
 		else
 			render 'new'
 		end
@@ -53,7 +53,6 @@ class PostsController < ApplicationController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-
 		redirect_to admin_index_path
 
 	end

@@ -7,7 +7,7 @@
 	   			<h3><%= category.name %> </h3>
 
 	        <p>
-		        <div href="#" class="btn btn-primary" role="button"><%= link_to 'edit', edit_category_path(category) %></div> 
+		        <div href="#" class="btn btn-default" role="button"><%= link_to 'edit', edit_category_path(category) %></div> 
 		        <div href="#" class="btn btn-default" role="button"><%= link_to 'delete', category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %></div>
 	        </p>
 	      </div>
