@@ -1,7 +1,13 @@
-<hr>
-<p>
-	name :<%= comment.name %><br>
-	Comment : <%= comment.body %>
+
+<div class="comment">
+	<div class="name">
+		<%= comment.name %>
+	</div>
+
+	<div class="comment-body">
+		<%= comment.body %>
+	</div>
+	<% if user_signed_in? %>
 	<%= link_to 'Delete', [comment.post, comment], method: :delete, class: "button", data: {confirm: 'Are you sure? '} %>
-</p>
-<hr>
+	<% end %>
+</div>

@@ -15,12 +15,13 @@
 	</p>
 	<p>
 		Title:<br>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, size: "100" %>
 	</p>
 
 	<p>
 		Body:<br>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, :class => "tinymce", size: "40 x 20 "%>
+		<%= tinymce %>
 	</p>
 
 	<p>

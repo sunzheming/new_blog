@@ -12,7 +12,7 @@
 				
 			</div>
 			<div class="body">
-				<%= post.body.truncate(300)%>
+				<%= post.body.truncate(300).html_safe%>
 			</div>
 			<div class="btn-group" role="group" >
   			<button type="button" class="btn btn-default"><%= link_to 'Read more', post %></button>
@@ -20,3 +20,5 @@
 		</div>
 	</div>
 <% end %>
+
+

@@ -8,44 +8,48 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-<div id="main-body">
-	<nav class="navbar ">
-		<div class="container-fluid">
-			<div id="nav">
-		<div class="nav-left">
-			<a class="navbar-brand" href="#">Jimmy's Blog</a>
+	<div id="main-body">
+		<nav class="navbar ">
+			<div class="container-fluid">
+				<div id="nav">
+			<div class="navbar-left">
+				<ul class="nav navbar-nav navbar-left">
+				<li><%= link_to "Jimmy's Blog", root_path %></li>
+					
+				</ul>
+			</div>
+			<div class="navbar-right">
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'Home', root_path %></li>
+					<% if user_signed_in? %>
+						<li><%= link_to 'Admin', admin_index_path %></li>
+					<% end %>
+				</ul>
+			</div>
 		</div>
-		<div class="navbar-right">
-			<ul class="nav navbar-nav navbar-right">
-				<li><%= link_to 'Home', root_path %></li>
-				<% if user_signed_in? %>
-					<li><%= link_to 'Admin', admin_index_path %></li>
-				<% end %>
+			</div>
+		</nav>
+
+		<!-- 
+		<div class="alert alert-info" role="alert"><%= notice %></div>
+		<div class="alert alert-warning" role="alert"><%= alert %></div>
+		 -->
+
+	<div id="sidebar">
+		<div class="sidebar-content">
+			<div class="sidebar-title">Category</div>
+			<% Category.all.each do |category| %>
+			<ul class="category-list">
+				<li><%= link_to category.name, posts_path(category: category.name) %></li>
 			</ul>
-		</div>
+	  	<% end %>
+	  </div>
+	  
 	</div>
-		</div>
-	</nav>
 
-	<!-- 
-	<div class="alert alert-info" role="alert"><%= notice %></div>
-	<div class="alert alert-warning" role="alert"><%= alert %></div>
-	 -->
 
-<div id="sidebar">
-	<div class="sidebar-content">
-		<div class="sidebar-title">Category</div>
-		<% Category.all.each do |category| %>
-		<ul class="category-list">
-			<li><%= link_to category.name, posts_path(category: category.name) %></li>
-		</ul>
-  	<% end %>
-  </div>
-  
-</div>
+		<%= yield %>
 
-	<%= yield %>
-
-</div>
+	</div>
 </body>
 </html>

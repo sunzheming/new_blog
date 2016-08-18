@@ -1,15 +1,38 @@
-<h1>
-	<%= @post.title %>
-</h1>
 
-<hr>
-<p>
-	<%= @post.body %>
-</p>
 
-<hr>
-Total <%= @post.comments.count %> comments
-<br>
-<%= render @post.comments %>
-add a comment:
-<%= render 'comments/form' %>
+
+<div id="main-post">
+	<div class="post">
+		<div class="post-header">
+			<div class="title">
+				<%= @post.title %>
+				<div class="post-info">
+				<%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
+				</div>
+			</div>
+
+			
+		</div>
+		<div class="body">
+			<%= @post.body.html_safe %>
+		</div>
+	</div>
+
+	
+
+
+	Total <%= @post.comments.count %> comments
+
+	<hr>
+	<div class="comments">
+	<%= render @post.comments %>
+	</div>
+	add a comment:
+	<%= render 'comments/form' %>
+	
+
+</div>
+
+
+
+

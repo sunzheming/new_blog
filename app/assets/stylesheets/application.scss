@@ -16,12 +16,24 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'normalize';
 
 
-body{
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html, body{
 	font-family: 'Roboto', sans-serif;
 	background: #f5f5f5;
-	
+	}
 
 	#main-body{
 		width: 960px;
@@ -38,12 +50,19 @@ body{
 				margin-right: 110px;
 
 			}
+			.navbar-left{
+				margin-right: 110px;
+				.logo{
+					font-size: 20px
+
+				}
+
+			}
+
 		}
     #sidebar{
 		  width: 210px;
-	    background: #f5f5f5;
 	    padding: 9px;
-	    height: 100%;
 	    float:right;
 
 	    .sidebar-content{
@@ -115,7 +134,30 @@ body{
 
 		}
 
+		.comments{
+			.comment{
+				  width: 100%;
+			    border-bottom: 1px solid #e4e4e4;
+			    overflow: hidden;
+			    margin: 0;
+			    padding: 10px;
+			    list-style: none;
+				.name{
+			    font-size: 20px;
+			    font-weight: 600;
+				}
+
+				.comment-body{
+
+				}
+			}
+			.comment-text-area{
+				    width: 600px;
+    height: 200px;
+			}
+		}
+
 
 	}
 
-}
+

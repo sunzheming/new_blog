@@ -1,0 +1,9 @@
+oolbar:
+  - styleselect | undo redo | image | link | table 
+  - image | link | table | bullist numlist | bold italic underline strikethrough 
+plugins:
+  - image
+  - link
+  - table
+
+
