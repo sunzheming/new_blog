@@ -12,6 +12,8 @@ devise 3.5
 
 tinymce-rails 4.4
 
+
+
 Deploy on passenger for Nginx.
 
 Passenger 5.0.29
