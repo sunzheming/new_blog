@@ -1,28 +1,19 @@
-== README
+This is my personal blog, you can visit it at http://www.sunzheming.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This blog built with Ruby on Rails. 
+Rails 4.2.2
+sqlite3
+bootstrap-sass
+devise 3.5
+tinymce-rails 4.4
 
-Things you may want to cover:
+Deploy on passenger for Nginx.
+Passenger 5.0.29
+Nginx 1.10.1
+Ruby 2.3.1p122
+Linux Ubuntu 14.04
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This blog just have the very basic functions right now and I am still working on it.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Oct.24.2016
