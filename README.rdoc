@@ -1,16 +1,25 @@
 This is my personal blog, you can visit it at http://www.sunzheming.com/
 
-This blog built with Ruby on Rails. 
+This blog built with Ruby on Rails.
+
 Rails 4.2.2
+
 sqlite3
+
 bootstrap-sass
+
 devise 3.5
+
 tinymce-rails 4.4
 
 Deploy on passenger for Nginx.
+
 Passenger 5.0.29
+
 Nginx 1.10.1
+
 Ruby 2.3.1p122
+
 Linux Ubuntu 14.04
 
 This blog just have the very basic functions right now and I am still working on it.
